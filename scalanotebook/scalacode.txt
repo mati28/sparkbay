@@ -1,0 +1,76 @@
+======================================================
+// Loops in scala
+
+// For Loop
+for (elem <- (1 t0 100))
+    print(elem)
+
+// while Loop
+    
+var lb = 1
+val ub = 100
+var totalEven = 0
+var totalOdd =0
+while (lb <= ub){
+	if(lb % 2 == 0) 
+		totalEven+= lb
+	else 
+		totalOdd+= lb 
+	lb+= 1
+
+}
+////
+Function
+def sum(f: Int=> Int , lb: Int, ub: Int): Int = {
+    var total=0
+    for (element <- lb to ub)
+        total += f(element)
+    total    
+}
+// function call
+sum(i=> i, 1, 100)
+sum(i=>i*i,1,100)
+sum(i=>i*i,1,100)
+// Ananymous function
+sum(i => {
+    if (i % 2 ==0)
+        i * i
+    else
+        i*2    
+},1,10)
+
+// Class Order
+
+class Order(orderId: String, orderDate: String, orderCustomerId: Int, orderStatus: String)
+:javap -p Order // to display info about the class from scala console
+
+class Order(orderId: String, orderDate: String, orderCustomerId: Int, orderStatus: String){
+
+    override def toString = "Order(" + orderId + "," + orderDate + ")" 
+}
+
+// Case class
+
+case class Order (orderId: Int, orderDate: String, orderCustomerId: String, orderStatus: String)
+// instanciation of a case class
+
+val order = Order(1,"2019-10-28 00.00.00.000","CUS100","PENDING")
+// Scala collection methods
+Set, List,Map
+
+val set = Set(1,2,3,3) // Duplicate are removed
+val map = Map("Guinee"->"Conakry","Gabon"->"Libreville")
+val list = List(1,2,3,5,3,4)
+// It is recommended to study methods available to each of these collections
+
+// Io operations
+
+import scala.io.Source
+
+val orderItems = Source.fromFile("/data/bigdata/retail_db/order_items/part-00000").getLines
+
+#######################################
+ To run scala with sbt after packaging with sbt package
+
+ sbt "runMain OrderRevenue 2"
+

@@ -1,0 +1,37 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /home/linuxguy/sparkbay/target/scala-2.12/wordoccurence_2.12-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	WeatherStationTwo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/WeatherStationTwo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	WeatherStation.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/WeatherStation.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MostKnownActor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/MostKnownActor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	WeatherStation$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/WeatherStation$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/sundogsoftware[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/com/sundogsoftware[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/sundogsoftware/spark[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/com/sundogsoftware/spark[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PopularMovie.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/PopularMovie.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	WeatherStationTwo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/WeatherStationTwo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CustomExpense.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/CustomExpense.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/sundogsoftware/spark/RatingsCounter$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/com/sundogsoftware/spark/RatingsCounter$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RatingCountCopy$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/RatingCountCopy$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/sundogsoftware/spark/RatingsCounter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/com/sundogsoftware/spark/RatingsCounter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MostKnownActor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/MostKnownActor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RatingCountCopy.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/RatingCountCopy.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CustomExpense$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/CustomExpense$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PopularMovie$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/linuxguy/sparkbay/target/scala-2.12/classes/PopularMovie$.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
