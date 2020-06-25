@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/data/bigdata/cca/SparkBase/sparkAppTwo/src/main/scala/SparkEtl.scala:63:3: not found: value Nature_of_Payment_or_Transfer_of_Value[0m
-[0m[[0m[31merror[0m] [0m[0m		Nature_of_Payment_or_Transfer_of_Value[0m
-[0m[[0m[31merror[0m] [0m[0m		^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

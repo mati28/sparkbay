@@ -170,37 +170,6 @@ hive>(retail_db) show functions
 
 hive>(retail_db) describe function length // to see detail of specific function
 
-create table customers (
-customerId int,
-customerFirstName string,
-customerLastName string,
-customerEmail string,
-customerPassword string,
-customerStreet string,
-customerCity string,
-customerState string,
-customerZipCode string)
-
-row format delimited fields terminated by ',';
-
-load data local inpath 'retail_db/customers' into table customers;
-
-
-select orderId, sum(orderitemsubtotal) 
-from commande INNER JOIN orderItems ON orderId = orderitemorderid 
-where orderStatus IN ('COMPLETE','CLOSED')
-group by orderId 
-having sum(orderitemsubtotal) >= 1000
-limit 10;
-
-select orderId, orderDate,orderStatus,orderitemsubtotal,
-round(sum(orderitemsubtotal),2) as revenue,
-orderitemsubtotal/round(sum(orderitemsubtotal),2)
-from commande INNER JOIN orderItems ON orderId = orderitemorderid 
-where orderStatus IN ('COMPLETE','CLOSED')
-group by orderDate,orderStatus,orderId
-having round(sum(orderitemsubtotal),2) >= 500
-order by orderDate,orderStatus, revenue desc;
 
 // to use less threads while running a query use:
 
@@ -212,3 +181,25 @@ df.createOrReplaceTempView("payments")
 
 spark.sql("select pysician_id,date_payment,record_id,payer,amount,physician_specialty,nature_of_payment")
 val subset =  spark.sql("")  
+
+
+// Reading csv by defining a schema.
+
+val schema = new StructType().add("sample","long").add("cThick", "integer").
+add("uCSize", "integer").add("uCShape","integer").add("mAdhes", "integer").
+add("sECSize", "integer").add("bNuc","integer").add("bChrom", "integer").
+add("nNuc", "integer").add("mitosis","integer").add("clas", "integer")
+
+val df = spark.read.format("csv").
+option("header",false).
+schema(recordSchema).
+load("/data/bigdata/data/breast-cancer-wisconsin.data")
+
+def binarize(input: Int) = input match {
+  case 2 => 0
+  case 4 => 1  
+}
+
+spark.udf.register("normalizerUDF", (input:Int) => binarize(input))
+
+}
