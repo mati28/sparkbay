@@ -1,6 +1,6 @@
 /**
     Author: Fassou Mathias NIAMY
-    Data Engineer & Atos Senegal
+    Data Engineer @ Atos Senegal
     Date:27 June, 2020 
     Gueule Tapee, Dakar, Senegal
     This program read three data tables from MySQL and make some aggregation 
