@@ -1,9 +1,9 @@
 /**
     Author: Fassou Mathias NIAMY
-    Data Engineet & Atos Senegal
+    Data Engineer & Atos Senegal
     Date:27 June, 2020 
     Gueule Tapee, Dakar, Senegal
-    This program read three data tables in MySQL and make some aggregation 
+    This program read three data tables from MySQL and make some aggregation 
     on them and store the result back into MySQL
 
     **/
