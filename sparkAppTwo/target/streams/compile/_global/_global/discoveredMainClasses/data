@@ -1,1 +1,1 @@
-["net.atos.spark.OrderRevenue","net.atos.spark.etl.SparkEtl"]
+["net.atos.spark.OrderRevenue","net.atos.spark.SparkMysqlDataFrame","net.atos.spark.etl.SparkEtl"]

@@ -106,10 +106,10 @@ read table from MySQL DB into spark DataFrame
 
 1. spark-shell --jars mysql-connector-java-5.1.46.jar --driver-class-path mysql-connector-java-5.1.46.jar
 
-2. val achatDF= spark.read.
+2. val orders= spark.read.
 	format("jdbc").
-	option("url", "jdbc:mysql://localhost/commerce").
-	option("dbtable", "achat").
+	option("url", "jdbc:mysql://localhost/mydb").
+	option("dbtable", "orders").
 	option("user","root").
 	option("password","passer").
 	load()
@@ -120,7 +120,7 @@ val df_mysql = spark.read.format(“jdbc”)
    .option(“url”, “jdbc:mysql://localhost:port/db”)
    .option(“driver”, “com.mysql.jdbc.Driver”)
    .option(“dbtable”, “tablename”) 
-   .option(“user”, “user”) 
+   .option(“user”, “root”) 
    .option(“password”, “password”) 
    .load()
 

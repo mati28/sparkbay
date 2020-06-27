@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/sparketl-_2.11-1.0.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/spark-etl-_2.11-1.0.0.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes[0m
@@ -36,10 +36,14 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/OrderRevenue$Order.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/OrderRevenue$$typecreator5$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/OrderRevenue$$typecreator5$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/SparkMysqlDataFrame$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/SparkMysqlDataFrame$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/OrderRevenue$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/OrderRevenue$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/OrderRevenue$$typecreator13$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/OrderRevenue$$typecreator13$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/SparkMysqlDataFrame.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/SparkMysqlDataFrame.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/OrderRevenue$OrderItem.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/OrderRevenue$OrderItem.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/OrderRevenue$Order$.class[0m
