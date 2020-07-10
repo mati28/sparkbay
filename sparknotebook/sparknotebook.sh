@@ -116,7 +116,8 @@ read table from MySQL DB into spark DataFrame
 ======================================================
 read table from MySQL DB into spark DataFrame
 
-val df_mysql = spark.read.format(“jdbc”)
+val df_mysql = spark.read.
+    format(“jdbc”)
    .option(“url”, “jdbc:mysql://localhost:port/db”)
    .option(“driver”, “com.mysql.jdbc.Driver”)
    .option(“dbtable”, “tablename”) 
@@ -148,17 +149,6 @@ OPTIONS (path "/home/linuxguy/Desktop/dataset/business.json");
 // From hive cli
 
 hive>(retail_db) set hive.metastore.warehouse.dir;
-
-create table trial(
-orderItemId int,
-orderItemOrderId int,
-orderItemProductId int,
-orderItemQuantity int,
-orderItemSubtotal float,
-orderitemProductPrice float)
-row format delimited fields terminated by ',';
-
-// to run spark on top hive
 
 1. launch spark-shell
 
@@ -203,3 +193,93 @@ def binarize(input: Int) = input match {
 spark.udf.register("normalizerUDF", (input:Int) => binarize(input))
 
 }
+//There are few ways to extract dataFrame Row mapValues
+
+
+Let start with some dummy data
+val transactions = Seq((1, 2), (1, 4), (2, 3)).toDF("user_id", "category_id")
+
+val transactions_with_counts = transactions
+  .groupBy($"user_id", $"category_id")
+  .count
+
+transactions_with_counts.printSchema
+
+// root
+// |-- user_id: integer (nullable = false)
+// |-- category_id: integer (nullable = false)
+// |-- count: long (nullable = false)
+=============================================
+
+1. Pattern matching
+
+import org.apache.spark.sql.Row
+
+transactions_with_counts.map{
+  case Row(user_id: Int, category_id: Int, rating: Long) =>
+    Rating(user_id, category_id, rating)
+} 
+
+2. Typed get* methods like getInt, getLong:
+
+transactions_with_counts.map(
+  r => Rating(r.getInt(0), r.getInt(1), r.getLong(2))
+)
+3. getAs method which can use both names and indices:
+transactions_with_counts.map(r => Rating(
+  r.getAs[Int]("user_id"), r.getAs[Int]("category_id"), r.getAs[Long](2)
+))
+4. Converting to statically typed Dataset (Spark 1.6+ / 2.0+):
+
+transactions_with_counts.as[(Int, Int, Long)]
+
+
+ val arr = ArrayType(IntegerType,false)
+ println("json() : "+arr.json)  
+ println("prettyJson() : "+arr.prettyJson) 
+ println("simpleString() : "+arr.simpleString) 
+ println("sql() : "+arr.sql) 
+ println("typeName() : "+arr.typeName) 
+ println("catalogString() : "+arr.catalogString) 
+ println("defaultSize() : "+arr.defaultSize) 
+
+
+val arrayStructureSchema = new StructType()
+.add("name",new StructType()
+.add("firstname",StringType)
+.add("middlename",StringType)
+.add("lastname",StringType))
+.add("languages", ArrayType(StringType))
+.add("state", StringType)
+.add("gender", StringType)
+
+
+val df = spark.createDataFrame(
+spark.sparkContext.parallelize(arrayStructureData),arrayStructureSchema)
+df.printSchema()
+df.show()
+
+
+
+val  schema = StructType(List(
+
+  StructField("orderId",IntegerType,false),
+  StructField("orderDate",StringType,false),
+  StructField("orderCustomerId",IntegerType,false),
+  StructField("orderStatus",StringType,false))
+
+)
+
+def oddEvenChecker(number:Int):(String,Int) = {
+  if (number%2 == 0) 
+    ("pair",1)
+  else
+    ("impair",1)
+
+}
+
+spark-shell --conf "spark.mongodb.input.uri=mongodb://127.0.0.1/customs.declaration?readPreference=primaryPreferred" \
+--packages org.mongodb.spark:mongo-spark-connector_2.11:1.1.0
+
+
+--conf "spark.mongodb.output.uri=mongodb://127.0.0.1/test.myCollection" \
