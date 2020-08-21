@@ -96,6 +96,8 @@ object OrderRevenue {
 
     //orderItemDS.show
 
+    // aggregate accross orderDate (sum,max,min) of orderItemSubtotal
+
    orderItemDS.createOrReplaceTempView("orderItems")
     val revenue = spark.sql("select o.orderDate,sum(oi.orderItemSubtotal) as total, " +
       "max(oi.orderItemSubtotal) as maximum,min(oi.orderItemSubtotal) as minimum " +

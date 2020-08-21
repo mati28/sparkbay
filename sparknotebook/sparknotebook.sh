@@ -283,3 +283,18 @@ spark-shell --conf "spark.mongodb.input.uri=mongodb://127.0.0.1/customs.declarat
 
 
 --conf "spark.mongodb.output.uri=mongodb://127.0.0.1/test.myCollection" \
+
+
+words = ['Apache', 'Spark', 'is', 'an', 'open-source', 'cluster-computing',
+    'framework', 'Apache', 'Spark', 'open-source', 'Spark']
+
+    'https://raw.githubusercontent.com/maigfrga/spark-streaming-book/master/data/books/tale2cities.txt'
+
+def line_cleaned(line):
+
+
+return line.replace('\ufeff\r', '').replace('\t', ' ').\
+replace('\n','').replace('\r', '').replace('(', '').\
+replace(')', '').replace("'",'').replace('"', '').\
+replace(',', '').replace('.', '').replace('*','').\
+replace('\ufeff','') 

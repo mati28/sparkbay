@@ -1,0 +1,16 @@
+[0m[[0m[31merror[0m] [0m[0m/data/bigdata/cca/sparkbay/sparkAppTwo/src/main/scala/InvertedIndex.scala:37:10: not found: value filter[0m
+[0m[[0m[31merror[0m] [0m[0m									filter(word => wordToKeep(word))[0m
+[0m[[0m[31merror[0m] [0m[0m									^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/bigdata/cca/sparkbay/sparkAppTwo/src/main/scala/InvertedIndex.scala:52:13: not found: value ascending[0m
+[0m[[0m[31merror[0m] [0m[0m		sortByKey(ascending = true).[0m
+[0m[[0m[31merror[0m] [0m[0m		          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/bigdata/cca/sparkbay/sparkAppTwo/src/main/scala/InvertedIndex.scala:58:21: value toVector is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m				val vect = iter.toVector.sortBy {case (fileName,count) => (-count,fileName)}[0m
+[0m[[0m[31merror[0m] [0m[0m				                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/bigdata/cca/sparkbay/sparkAppTwo/src/main/scala/InvertedIndex.scala:58:64: value unary_- is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m				val vect = iter.toVector.sortBy {case (fileName,count) => (-count,fileName)}[0m
+[0m[[0m[31merror[0m] [0m[0m				                                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/bigdata/cca/sparkbay/sparkAppTwo/src/main/scala/InvertedIndex.scala:60:29: value size is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m				val totalCount = counts.size[0m
+[0m[[0m[31merror[0m] [0m[0m				                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

@@ -1,5 +1,5 @@
 
-package net.atos.spark.etl
+package net.atos.spark
 
 import java.sql.DriverManager
 
@@ -33,7 +33,7 @@ object SparkEtl {
 		appName("").
 		getOrCreate()
 
-		//   I Read data from csv and register in temp table .
+		//   I. Read data from csv and register in temp table .
 
 		val input = args(0)
 
@@ -49,7 +49,7 @@ object SparkEtl {
 
 		df.createOrReplaceTempView("payments")
 
-		// II Transform into a Dataset of payment Object
+		// II. Transform into a Dataset of payment Object
 
 		val ds: Dataset[Payment] = spark.sql("select Physician_Profile_ID as physician_id, "+
 		"Date_of_Payment as date_payment, "+

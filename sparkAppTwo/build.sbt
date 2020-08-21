@@ -11,5 +11,3 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.3"
 libraryDependencies += "log4j" % "log4j" % "1.2.17"
 
 libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.20"
-
-libraryDependencies += "com.lucidworks.spark" % "spark-solr" % "3.8.0"
