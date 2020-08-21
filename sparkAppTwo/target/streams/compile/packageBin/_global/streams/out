@@ -24,8 +24,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/InvertedIndex$$anonfun$3$$anonfun$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/SparkEtl$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/SparkEtl$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/InvertedIndex$Inverted$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/InvertedIndex$Inverted$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/SparkEtl$$typecreator1$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/SparkEtl$$typecreator1$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/OrderRevenue.class[0m
@@ -50,8 +48,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/OrderRevenue$Order.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/InvertedIndex.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/InvertedIndex.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/InvertedIndex$Inverted.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/InvertedIndex$Inverted.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/SparkEtl$Payment.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /data/bigdata/cca/sparkbay/sparkAppTwo/target/scala-2.11/classes/net/atos/spark/SparkEtl$Payment.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	net/atos/spark/InvertedIndex$$anonfun$3$$anonfun$6.class[0m

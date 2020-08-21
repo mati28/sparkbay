@@ -1,3 +1,10 @@
+/**
+
+Inverted Index own version inspired from Dean Wampler git
+
+
+*/
+
 package net.atos.spark
 
 import java.io.File
@@ -8,23 +15,23 @@ import org.apache.spark.sql.types._
 
 import org.apache.spark.sql.Row
 
+import org.apache.log4j._
+
 
 object InvertedIndex {
 
 	//Set of words to be removed
-	case class Inverted(word:String,totalcount:Int,locations:Vector[String],counts:Vector[Int])
-
 	val unwantedWords = Set("a","the","thus","therefore","for","in")
-
+	//Function to select word to maintain
 	def wordToKeep(word:String):Boolean= !unwantedWords.contains(word) 
-
+	//Define a schema
 	val schema = StructType(List(
       StructField("word",StringType,true),
       StructField("totalcount",IntegerType,true),
       StructField("locations",ArrayType(StringType, true),true),
       StructField("counts",ArrayType(IntegerType,true),true))
     )
-
+	// Create a function that return a Row of element to be used
 	def processor(spark:SparkSession,path:String) = {
 
 		val IIndex = spark.sparkContext.wholeTextFiles(path).
@@ -69,6 +76,9 @@ object InvertedIndex {
 
 	def main(args:Array[String]):Unit = {
 
+		// Log the log level to print only errors
+    	Logger.getLogger("org").setLevel(Level.ERROR)
+		// Create a SparkSession object
 		val spark = SparkSession.
 		builder().
 		appName("Inverted Index").
@@ -87,7 +97,8 @@ object InvertedIndex {
 
 		invertedDF.createOrReplaceTempView("inverted")
 
-		spark.sql("select word,totalcount,locations[0]as top_location,counts[0] as top_count from inverted").show
+		spark.sql("select word,totalcount,locations[0]as top_location,counts[0] as top_count from inverted "+
+			"where totalcount >= 10").show
 	}
 
 }
